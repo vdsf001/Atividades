@@ -1,0 +1,23 @@
+package excecao2;
+
+import javax.swing.JOptionPane;
+
+public class Excecao2 {
+
+    public static void main(String[] args) {
+        try {
+
+            String N = JOptionPane.showInputDialog("Digite um número inteiro: ");
+            int n = Integer.parseInt(N);
+            if (n % 2 == 0) {
+                JOptionPane.showMessageDialog(null, n + "É par!");
+            } else {
+                JOptionPane.showMessageDialog(null, n + "É impar!");
+            }
+        }catch(NumberFormatException e){
+            JOptionPane.showMessageDialog(null,"Digite um numero!\n"+e.getMessage());
+       
+        }
+    }
+
+}
