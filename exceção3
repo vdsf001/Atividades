@@ -1,0 +1,24 @@
+package excecao1;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Excecao1 {
+
+   
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+        try {
+
+            System.out.println("Digite um numero: ");
+            float n = leia.nextFloat();
+            float d = n * 2;
+            System.out.println("Dobro: " + d);
+        }catch(InputMismatchException e){
+            System.out.println("Digite apenas números!\n"+e.getMessage());
+        }finally{
+            System.out.println("Acabou a porra toda");
+        }
+    }
+
+}
